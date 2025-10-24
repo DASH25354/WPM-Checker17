@@ -127,12 +127,13 @@
 
 <!-- テキスト -->
 <div id="text">
-【15】Homework is my biggest stress. If I had a clear plan, I’d start right after school and be done by dinner. I wish math were easier; sometimes I just stare at one problem for thirty minutes. I act as if I were calm in class, but my hands shake before I check my answers. If I had someone to ask, I’d learn faster. I’m also worried about the school festival. I wish our team were kinder. We act as if we were a perfect group, but we argue about the poster and who’s in charge. If the teacher were there, we’d listen. I wish we could say sorry and work as one team. If we had a fresh start, we’d make something we were proud of.</div>
+【17】Snoopy is one of the best-loved cartoon characters in the world. He first appeared in the Peanuts comic strip on October 4, 1950, so this is his 75th anniversary. He is a beagle with a great imagination. He wants to be a writer, and he imagines himself as a war pilot. But he is a dog, and he loves to eat and take naps on top of his doghouse. Snoopy belongs to Charlie Brown, the main character in Peanuts. Charlie Brown is an 8-year-old boy who is a “lovable loser.” He has a lot of unique friends like bossy Lucy and musical Schroeder. Peanuts is one of the most popular comic strips in the world. I think that’s because everybody can see something of themselves in the characters. 
+</div>
 
 <!-- 音声再生（英文の下、ボタンの上） -->
 <div class="audio-wrapper">
   <audio controls>
-    <source src="15.mp3" type="audio/mpeg">
+    <source src="17.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
@@ -145,10 +146,11 @@
 <div id="questions">
   <h3>Quiz</h3>
   <label>Select all options below that match the content of the passage.</label></span>
-  <span class="question-option"><input type="checkbox" class="q1" value="a"> The student feels stressed by homework (especially math) and wishes to finish efficiently with a clear plan.</span>
-  <span class="question-option"><input type="checkbox" class="q1" value="b"> The student wakes up early every morning to study English and improve grades.</span>
-  <span class="question-option"><input type="checkbox" class="q1" value="c"> The student thinks the school library is quiet and comfortable.</span>
-  <span class="question-option"><input type="checkbox" class="q1" value="d"> The student experiences conflict within the school festival team over the poster and wishes to apologize and work together. </span>
+  <span class="question-option"><input type="checkbox" class="q1" value="a"> Charlie Brown lives his school life and develops friendships in detail.</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="b"> The passage celebrates Snoopy’s 75th anniversary and explains why Peanuts resonates with readers.
+</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="c"> The passage presents Snoopy as a beagle in popular culture and highlights his imaginative roles and global appeal.</span>
+  <span class="question-option"><input type="checkbox" class="q1" value="d"> Classic comic strips analyze war pilots across various stories. </span>
 </div>
 
 <div id="result"></div>
@@ -168,8 +170,8 @@ function finishReading() {
   if (!startTime) return alert("Please start reading first!");
   const elapsedSec = (Date.now() - startTime) / 1000;
 
-  // 正解選択肢: a, d
-  const correctAnswers = ["a", "d"];
+  // 正解選択肢: b, c
+  const correctAnswers = ["b", "c"];
   const checked = Array.from(document.querySelectorAll(".q1:checked")).map(el => el.value);
   const numCorrect = checked.filter(val => correctAnswers.includes(val)).length;
   const numIncorrect = checked.filter(val => !correctAnswers.includes(val)).length;
@@ -194,6 +196,7 @@ function finishReading() {
 
 </body>
 </html>
+
 
 
 
